@@ -14,7 +14,7 @@ export class RFIDStation {
         }
 
         let res = await GlobalUse.api.RFIDRemind(1).catch()
-        if (!res.succecc) {
+        if (!res.success) {
             GlobalUse.log(`RFIDRemind fail`)
         }
     }
