@@ -6,7 +6,7 @@ const delay = require('delay');
 
 export class IRRScanner {
 
-    scanStationPeriod = 100
+    scanStationPeriod = 2000
     lastScanStationTime = new Date(0)
     testScanner = new RFIDStation()
 
