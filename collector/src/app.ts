@@ -42,10 +42,10 @@ app.use(loggerMiddleware);
 // 建立很多個 收集器 Collector 跟 route 連接 透過網路控制
 import { GlobalUse } from './global-use';
 
-import { PlcCollector } from './plc/plc-collector';
-let plc = new PlcCollector();
-plc.connect();
-GlobalUse.plcCollector = plc;
+// import { PlcCollector } from './plc/plc-collector';
+// let plc = new PlcCollector();
+// plc.connect();
+// GlobalUse.plcCollector = plc;
 
 // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
 
