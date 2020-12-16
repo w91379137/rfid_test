@@ -63,8 +63,8 @@ export class IRRScanner {
         if (gap < this.scanStationPeriod) {
             await delay(this.scanStationPeriod - gap)
         }
-        this.lastScanStationTime = now
-    }   
+        this.lastScanStationTime = new Date()
+    }
 }
 
 // ====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====.====
