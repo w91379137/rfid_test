@@ -13,9 +13,32 @@ export class RFIDStation {
             GlobalUse.log(`disconnect`)
         }
 
-        let res = await GlobalUse.api.RFIDRemind(1).catch()
-        if (!res.success) {
-            GlobalUse.log(`RFIDRemind fail`)
+        {
+            let res = await GlobalUse.api.RFIDRemind(1).catch()
+            if (!res.success) {
+                GlobalUse.log(`RFIDRemind fail`)
+            }
         }
+        if(getRandomInt(0, 5) === 0){
+            let res = await GlobalUse.api.RFIDReadUntil(1).catch()
+            if (res.success) {
+                console.log('reset', res)
+            }
+        }
+
+        if(getRandomInt(0, 5) === 0){
+            let res = await GlobalUse.api.RFIDReadUntilResult(1).catch()
+            if (res.success) {
+                console.log('get', res)
+            }
+        }
+
+        
     }
 }
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }
